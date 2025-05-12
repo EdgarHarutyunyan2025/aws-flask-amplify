@@ -9,12 +9,14 @@ jobs:
   notify-devops:
     runs-on: ubuntu-latest
 
+
     steps:
-      - name: Send dispatch to devops repo
+      - name: Отправить repository_dispatch
+        env:
+          TOKEN_FOR_FRONT: ${{ secrets.TOKEN_FOR_FRONT }}
         run: |
-           curl -X POST \
-            -H "Authorization: token ${{ secrets.TOKEN_FOR_FRONT }}" \
+          curl -X POST \
+            -H "Authorization: token $TOKEN_FOR_FRONT" \
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/EdgarHarutyunyan2025/packer_task/dispatches \
             -d '{"event_type":"front-changed"}'
-          
