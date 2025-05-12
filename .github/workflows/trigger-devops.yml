@@ -15,6 +15,5 @@ jobs:
           curl -X POST \
             -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
-            https://api.github.com/repos/EdgarHarutyunyan2025/packer_task/dispatches \
-            -d '{"event_type": "front-changed"}'
-
+            -d '{"event_type": "front-changed"}' \
+            https://api.github.com/repos/EdgarHarutyunyan2025/packer_task/dispatches
