@@ -13,7 +13,7 @@ jobs:
       - name: Send dispatch to devops repo
         run: |
           curl -X POST \
-            -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN}}" \
+            -H "Authorization: token ${{ secrets.tokrn_for_front }}" \
             -H "Accept: application/vnd.github+json" \
             -d '{"event_type": "front-changed"}' \
             https://api.github.com/repos/EdgarHarutyunyan2025/packer_task/dispatches
