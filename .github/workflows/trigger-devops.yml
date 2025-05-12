@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Send dispatch to devops repo
         run: |
-            curl -H "Authorization: token ${{ secrets.TOKRN_FOR_FRONT }}" https://api.github.com/repos/EdgarHarutyunyan2025/packer_task
+            curl -H "Authorization: token ${{ secrets.TOKEN_FOR_FRONT }}" https://api.github.com/repos/EdgarHarutyunyan2025/packer_task
